@@ -46,9 +46,9 @@ class stack_using_node{
     }
 
     bool isEmpty(){
-        if(numnodes)
-            return false;
-        return true;
+        if(numnodes==0)
+            return true;
+        return false;
     }
 
     int size(){
