@@ -34,12 +34,12 @@ int main(){
     insertion_sort(ar1,n);
     insertion_sort(ar2,n);
 
-    for(int i=0,j=0;i<n,j<n;){
+    for(i=0,j=0;i<n && j<n;){
         if(ar1[i]>ar2[j]){
             ar3[c] = ar2[j];
             j++;c++;
         }else if(ar1[i] == ar2[j]){
-            ar3[c] = ar1[i];
+            ar3[c++] = ar1[i];
             ar3[c] = ar1[i];
             i++;
             j++;
@@ -51,24 +51,17 @@ int main(){
         }
     }
 
-
-
-    if(i == n){
         for(int k=j;k<n;k++){
             ar3[c] = ar2[k];
             c++;
         }
-    }
 
-    if(j == n){
         for(int k=i;k<n;k++){
             ar3[c] = ar1[k];
             c++;
         }
-    }
 
-    //cout<<c<<"\n";
-    for(int i=0;i<=c;i++){
+    for(int i=0;i<c;i++){
         cout<<ar3[i]<<"\t";
     }
 
